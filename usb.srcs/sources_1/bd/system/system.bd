@@ -1,0 +1,1749 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x7EB4F0A362F04304",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../usb.gen/sources_1/bd/system",
+      "name": "system",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_in_bufg_0": "",
+      "clocks": {
+        "xlconstant_0": "",
+        "clock_1h": ""
+      },
+      "UART_rx": {
+        "gpio_obuf_4": "",
+        "gpio_obuf_3": "",
+        "uart_rx_0": "",
+        "uart_rx_reg_0": "",
+        "uart_rx_interpreter_0": ""
+      },
+      "outsplitter_0": "",
+      "hex_display_0": "",
+      "led_1_reg_a": "",
+      "led_2_reg_b": "",
+      "reg_c": "",
+      "UART_tx": {
+        "uart_tx_0": "",
+        "gpio_obuf_3": "",
+        "gpio_obuf_1": "",
+        "gpio_obuf_0": "",
+        "uart_tx_viewer_0": ""
+      },
+      "sys_register_0": "",
+      "variable_clock_div_0": "",
+      "gpio_obuf_0": ""
+    },
+    "ports": {
+      "BTNL": {
+        "direction": "I"
+      },
+      "BTNR": {
+        "direction": "I"
+      },
+      "BTNU": {
+        "direction": "I"
+      },
+      "BTND": {
+        "direction": "I"
+      },
+      "BTNC": {
+        "direction": "I"
+      },
+      "SW0": {
+        "direction": "I"
+      },
+      "SW1": {
+        "direction": "I"
+      },
+      "SW2": {
+        "direction": "I"
+      },
+      "SW3": {
+        "direction": "I"
+      },
+      "SW4": {
+        "direction": "I"
+      },
+      "SW5": {
+        "direction": "I"
+      },
+      "SW6": {
+        "direction": "I"
+      },
+      "SW7": {
+        "direction": "I"
+      },
+      "SW8": {
+        "direction": "I"
+      },
+      "SW9": {
+        "direction": "I"
+      },
+      "SW10": {
+        "direction": "I"
+      },
+      "SW11": {
+        "direction": "I"
+      },
+      "SW12": {
+        "direction": "I"
+      },
+      "SW13": {
+        "direction": "I"
+      },
+      "SW14": {
+        "direction": "I"
+      },
+      "SW15": {
+        "direction": "I"
+      },
+      "AN0": {
+        "direction": "O"
+      },
+      "AN1": {
+        "direction": "O"
+      },
+      "AN2": {
+        "direction": "O"
+      },
+      "AN3": {
+        "direction": "O"
+      },
+      "CA": {
+        "direction": "O"
+      },
+      "CB": {
+        "direction": "O"
+      },
+      "CC": {
+        "direction": "O"
+      },
+      "CD": {
+        "direction": "O"
+      },
+      "CE": {
+        "direction": "O"
+      },
+      "CF": {
+        "direction": "O"
+      },
+      "CG": {
+        "direction": "O"
+      },
+      "DP": {
+        "direction": "O"
+      },
+      "LD0": {
+        "direction": "O"
+      },
+      "LD1": {
+        "direction": "O"
+      },
+      "LD2": {
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "system_variable_clock_div_1_0_o_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "5",
+            "value_src": "user_prop"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "LD3": {
+        "direction": "O"
+      },
+      "LD4": {
+        "direction": "O"
+      },
+      "LD5": {
+        "direction": "O"
+      },
+      "LD6": {
+        "direction": "O"
+      },
+      "LD7": {
+        "direction": "O"
+      },
+      "LD8": {
+        "direction": "O"
+      },
+      "LD9": {
+        "direction": "O"
+      },
+      "LD10": {
+        "direction": "O"
+      },
+      "LD11": {
+        "direction": "O"
+      },
+      "LD12": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "LD13": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "LD14": {
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "system_variable_clock_div_1_0_o_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "1",
+            "value_src": "user_prop"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "LD15": {
+        "direction": "O"
+      },
+      "JA1": {
+        "direction": "IO"
+      },
+      "JA2": {
+        "direction": "IO"
+      },
+      "JA3": {
+        "direction": "IO"
+      },
+      "JA4": {
+        "direction": "IO"
+      },
+      "JA7": {
+        "direction": "IO"
+      },
+      "JA8": {
+        "direction": "IO"
+      },
+      "JA9": {
+        "direction": "IO"
+      },
+      "JA10": {
+        "direction": "IO"
+      },
+      "JB1": {
+        "direction": "IO"
+      },
+      "JB2": {
+        "direction": "IO"
+      },
+      "JB3": {
+        "direction": "IO"
+      },
+      "JB4": {
+        "direction": "IO"
+      },
+      "JB7": {
+        "direction": "IO"
+      },
+      "JB8": {
+        "direction": "IO"
+      },
+      "JB9": {
+        "direction": "IO"
+      },
+      "JB10": {
+        "direction": "IO"
+      },
+      "JC1": {
+        "direction": "IO"
+      },
+      "JC3": {
+        "direction": "IO"
+      },
+      "JC4": {
+        "direction": "IO"
+      },
+      "JC7": {
+        "direction": "IO"
+      },
+      "JC8": {
+        "direction": "IO"
+      },
+      "JC9": {
+        "direction": "IO"
+      },
+      "JC10": {
+        "direction": "IO"
+      },
+      "JX1": {
+        "direction": "IO"
+      },
+      "JX2": {
+        "direction": "IO"
+      },
+      "JX3": {
+        "direction": "IO"
+      },
+      "JX4": {
+        "direction": "IO"
+      },
+      "JX7": {
+        "direction": "IO"
+      },
+      "JX8": {
+        "direction": "IO"
+      },
+      "JX9": {
+        "direction": "IO"
+      },
+      "JX10": {
+        "direction": "IO"
+      },
+      "clk_in": {
+        "direction": "I"
+      },
+      "JC2": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "clk_in_bufg_0": {
+        "vlnv": "xilinx.com:module_ref:clk_in_bufg:1.0",
+        "xci_name": "system_clk_in_bufg_0_0",
+        "xci_path": "ip\\system_clk_in_bufg_0_0\\system_clk_in_bufg_0_0.xci",
+        "inst_hier_path": "clk_in_bufg_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clk_in_bufg",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "o_clk": {
+            "type": "clk",
+            "direction": "O",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      },
+      "clocks": {
+        "ports": {
+          "i_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "led_clk": {
+            "type": "clk",
+            "direction": "O"
+          }
+        },
+        "components": {
+          "xlconstant_0": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "system_xlconstant_0_0",
+            "xci_path": "ip\\system_xlconstant_0_0\\system_xlconstant_0_0.xci",
+            "inst_hier_path": "clocks/xlconstant_0",
+            "parameters": {
+              "CONST_VAL": {
+                "value": "50000000"
+              },
+              "CONST_WIDTH": {
+                "value": "26"
+              }
+            }
+          },
+          "clock_1h": {
+            "vlnv": "xilinx.com:module_ref:variable_clock_div:1.0",
+            "xci_name": "system_variable_clock_div_1_0",
+            "xci_path": "ip\\system_variable_clock_div_1_0\\system_variable_clock_div_1_0.xci",
+            "inst_hier_path": "clocks/clock_1h",
+            "parameters": {
+              "COUNT_WIDTH": {
+                "value": "26"
+              }
+            },
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "variable_clock_div",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "i_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "const_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "system_clk_in_bufg_0_0_o_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "COUNT": {
+                "direction": "I",
+                "left": "25",
+                "right": "0"
+              },
+              "o_clk": {
+                "type": "clk",
+                "direction": "O",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "1"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "nets": {
+          "i_clk_1": {
+            "ports": [
+              "i_clk",
+              "clock_1h/i_clk"
+            ]
+          },
+          "variable_clock_div_1_o_clk": {
+            "ports": [
+              "clock_1h/o_clk",
+              "led_clk"
+            ]
+          },
+          "xlconstant_0_dout": {
+            "ports": [
+              "xlconstant_0/dout",
+              "clock_1h/COUNT"
+            ]
+          }
+        }
+      },
+      "UART_rx": {
+        "ports": {
+          "clk_in": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_rx": {
+            "direction": "I"
+          },
+          "rx_clk": {
+            "direction": "IO"
+          },
+          "idle": {
+            "direction": "IO"
+          },
+          "o_idle": {
+            "direction": "O"
+          },
+          "o_new_edit": {
+            "direction": "O"
+          },
+          "o_waddr": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "o_wdata": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "f_viewing": {
+            "direction": "O"
+          }
+        },
+        "components": {
+          "gpio_obuf_4": {
+            "vlnv": "xilinx.com:module_ref:gpio_obuf:1.0",
+            "xci_name": "system_gpio_obuf_4_0",
+            "xci_path": "ip\\system_gpio_obuf_4_0\\system_gpio_obuf_4_0.xci",
+            "inst_hier_path": "UART_rx/gpio_obuf_4",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "gpio_obuf",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "d_i": {
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "9600",
+                    "value_src": "user_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "default_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "system_uart_rx_0_0_rx_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "d_o": {
+                "direction": "IO"
+              }
+            }
+          },
+          "gpio_obuf_3": {
+            "vlnv": "xilinx.com:module_ref:gpio_obuf:1.0",
+            "xci_name": "system_gpio_obuf_3_0",
+            "xci_path": "ip\\system_gpio_obuf_3_0\\system_gpio_obuf_3_0.xci",
+            "inst_hier_path": "UART_rx/gpio_obuf_3",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "gpio_obuf",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "d_i": {
+                "direction": "I"
+              },
+              "d_o": {
+                "direction": "IO"
+              }
+            }
+          },
+          "uart_rx_0": {
+            "vlnv": "xilinx.com:module_ref:uart_rx:1.0",
+            "xci_name": "system_uart_rx_0_0",
+            "xci_path": "ip\\system_uart_rx_0_0\\system_uart_rx_0_0.xci",
+            "inst_hier_path": "UART_rx/uart_rx_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "uart_rx",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "i_rx": {
+                "direction": "I"
+              },
+              "i_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "const_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "system_clk_in_bufg_0_0_o_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "rx_clk": {
+                "type": "clk",
+                "direction": "O",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "9600"
+                  }
+                }
+              },
+              "o_idle": {
+                "direction": "O"
+              },
+              "o_new_byte": {
+                "direction": "O"
+              }
+            }
+          },
+          "uart_rx_reg_0": {
+            "vlnv": "xilinx.com:module_ref:uart_rx_reg:1.0",
+            "xci_name": "system_uart_rx_reg_0_0",
+            "xci_path": "ip\\system_uart_rx_reg_0_0\\system_uart_rx_reg_0_0.xci",
+            "inst_hier_path": "UART_rx/uart_rx_reg_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "uart_rx_reg",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "i_rx_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "9600",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "system_uart_rx_0_0_rx_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "i_rx": {
+                "direction": "I"
+              },
+              "i_idle": {
+                "direction": "I"
+              },
+              "o_rx_byte": {
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              }
+            }
+          },
+          "uart_rx_interpreter_0": {
+            "vlnv": "xilinx.com:module_ref:uart_rx_interpreter:1.0",
+            "xci_name": "system_uart_rx_interpreter_0_0",
+            "xci_path": "ip\\system_uart_rx_interpreter_0_0\\system_uart_rx_interpreter_0_0.xci",
+            "inst_hier_path": "UART_rx/uart_rx_interpreter_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "uart_rx_interpreter",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "i_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "const_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "system_clk_in_bufg_0_0_o_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "i_new_byte": {
+                "direction": "I"
+              },
+              "i_rx_byte": {
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "o_waddr": {
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "o_wdata": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "o_cmd": {
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "o_new_edit": {
+                "direction": "O"
+              },
+              "f_editing": {
+                "direction": "O"
+              },
+              "f_viewing": {
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "nets": {
+          "JC2_1": {
+            "ports": [
+              "i_rx",
+              "uart_rx_0/i_rx",
+              "uart_rx_reg_0/i_rx"
+            ]
+          },
+          "Net": {
+            "ports": [
+              "rx_clk",
+              "gpio_obuf_4/d_o"
+            ]
+          },
+          "Net1": {
+            "ports": [
+              "idle",
+              "gpio_obuf_3/d_o"
+            ]
+          },
+          "clk_in_1": {
+            "ports": [
+              "clk_in",
+              "uart_rx_0/i_clk",
+              "uart_rx_interpreter_0/i_clk"
+            ]
+          },
+          "uart_rx_0_o_idle": {
+            "ports": [
+              "uart_rx_0/o_idle",
+              "gpio_obuf_3/d_i",
+              "o_idle",
+              "uart_rx_reg_0/i_idle"
+            ]
+          },
+          "uart_rx_0_o_new_byte": {
+            "ports": [
+              "uart_rx_0/o_new_byte",
+              "uart_rx_interpreter_0/i_new_byte"
+            ]
+          },
+          "uart_rx_0_rx_clk": {
+            "ports": [
+              "uart_rx_0/rx_clk",
+              "gpio_obuf_4/d_i",
+              "uart_rx_reg_0/i_rx_clk"
+            ]
+          },
+          "uart_rx_interpreter_0_f_viewing": {
+            "ports": [
+              "uart_rx_interpreter_0/f_viewing",
+              "f_viewing"
+            ]
+          },
+          "uart_rx_interpreter_0_o_new_edit": {
+            "ports": [
+              "uart_rx_interpreter_0/o_new_edit",
+              "o_new_edit"
+            ]
+          },
+          "uart_rx_interpreter_0_o_waddr": {
+            "ports": [
+              "uart_rx_interpreter_0/o_waddr",
+              "o_waddr"
+            ]
+          },
+          "uart_rx_interpreter_0_o_wdata": {
+            "ports": [
+              "uart_rx_interpreter_0/o_wdata",
+              "o_wdata"
+            ]
+          },
+          "uart_rx_reg_0_o_rx_byte": {
+            "ports": [
+              "uart_rx_reg_0/o_rx_byte",
+              "uart_rx_interpreter_0/i_rx_byte"
+            ]
+          }
+        }
+      },
+      "outsplitter_0": {
+        "vlnv": "xilinx.com:module_ref:outsplitter:1.0",
+        "xci_name": "system_outsplitter_0_0",
+        "xci_path": "ip\\system_outsplitter_0_0\\system_outsplitter_0_0.xci",
+        "inst_hier_path": "outsplitter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "outsplitter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "a": {
+            "direction": "O"
+          },
+          "b": {
+            "direction": "O"
+          },
+          "c": {
+            "direction": "O",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "system_variable_clock_div_1_0_o_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "5",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "d": {
+            "direction": "O"
+          },
+          "e": {
+            "direction": "O"
+          },
+          "f": {
+            "direction": "O"
+          },
+          "g": {
+            "direction": "O"
+          },
+          "h": {
+            "direction": "O"
+          }
+        }
+      },
+      "hex_display_0": {
+        "vlnv": "xilinx.com:module_ref:hex_display:1.0",
+        "xci_name": "system_hex_display_0_0",
+        "xci_path": "ip\\system_hex_display_0_0\\system_hex_display_0_0.xci",
+        "inst_hier_path": "hex_display_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "hex_display",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "const_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "system_clk_in_bufg_0_0_o_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "da": {
+            "direction": "O"
+          },
+          "db": {
+            "direction": "O"
+          },
+          "dc": {
+            "direction": "O"
+          },
+          "dd": {
+            "direction": "O"
+          },
+          "a": {
+            "direction": "O"
+          },
+          "b": {
+            "direction": "O"
+          },
+          "c": {
+            "direction": "O"
+          },
+          "d": {
+            "direction": "O"
+          },
+          "e": {
+            "direction": "O"
+          },
+          "f": {
+            "direction": "O"
+          },
+          "g": {
+            "direction": "O"
+          },
+          "dp": {
+            "direction": "O"
+          }
+        }
+      },
+      "led_1_reg_a": {
+        "vlnv": "xilinx.com:module_ref:sys_register:1.0",
+        "xci_name": "system_sys_register_0_0",
+        "xci_path": "ip\\system_sys_register_0_0\\system_sys_register_0_0.xci",
+        "inst_hier_path": "led_1_reg_a",
+        "parameters": {
+          "ADDR": {
+            "value": "97"
+          },
+          "OUTWIDTH": {
+            "value": "1"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "sys_register",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "const_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "system_clk_in_bufg_0_0_o_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i_addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "i_load_data": {
+            "direction": "I"
+          },
+          "o_data": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "led_2_reg_b": {
+        "vlnv": "xilinx.com:module_ref:sys_register:1.0",
+        "xci_name": "system_sys_register_1_0",
+        "xci_path": "ip\\system_sys_register_1_0\\system_sys_register_1_0.xci",
+        "inst_hier_path": "led_2_reg_b",
+        "parameters": {
+          "ADDR": {
+            "value": "98"
+          },
+          "OUTWIDTH": {
+            "value": "1"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "sys_register",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "const_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "system_clk_in_bufg_0_0_o_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i_addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "i_load_data": {
+            "direction": "I"
+          },
+          "o_data": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "reg_c": {
+        "vlnv": "xilinx.com:module_ref:sys_register:1.0",
+        "xci_name": "system_sys_register_0_1",
+        "xci_path": "ip\\system_sys_register_0_1\\system_sys_register_0_1.xci",
+        "inst_hier_path": "reg_c",
+        "parameters": {
+          "ADDR": {
+            "value": "99"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "sys_register",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "const_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "system_clk_in_bufg_0_0_o_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i_addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "i_load_data": {
+            "direction": "I"
+          },
+          "o_data": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "UART_tx": {
+        "ports": {
+          "i_send_data": {
+            "direction": "I"
+          },
+          "i_addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "led_1_reg_a": {
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "led_2_reg_b": {
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "reg_c": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "LD10": {
+            "direction": "O"
+          },
+          "JA4": {
+            "direction": "IO"
+          },
+          "JA3": {
+            "direction": "IO"
+          },
+          "JC1": {
+            "direction": "IO"
+          },
+          "reg_p": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        },
+        "components": {
+          "uart_tx_0": {
+            "vlnv": "xilinx.com:module_ref:uart_tx:1.0",
+            "xci_name": "system_uart_tx_0_0",
+            "xci_path": "ip\\system_uart_tx_0_0\\system_uart_tx_0_0.xci",
+            "inst_hier_path": "UART_tx/uart_tx_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "uart_tx",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "i_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "const_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "system_clk_in_bufg_0_0_o_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "i_data": {
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "i_send": {
+                "direction": "I"
+              },
+              "o_tx": {
+                "direction": "O"
+              },
+              "o_start_send": {
+                "direction": "O"
+              },
+              "o_busy": {
+                "direction": "O"
+              }
+            }
+          },
+          "gpio_obuf_3": {
+            "vlnv": "xilinx.com:module_ref:gpio_obuf:1.0",
+            "xci_name": "system_gpio_obuf_3_1",
+            "xci_path": "ip\\system_gpio_obuf_3_1\\system_gpio_obuf_3_1.xci",
+            "inst_hier_path": "UART_tx/gpio_obuf_3",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "gpio_obuf",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "d_i": {
+                "direction": "I"
+              },
+              "d_o": {
+                "direction": "IO"
+              }
+            }
+          },
+          "gpio_obuf_1": {
+            "vlnv": "xilinx.com:module_ref:gpio_obuf:1.0",
+            "xci_name": "system_gpio_obuf_1_1",
+            "xci_path": "ip\\system_gpio_obuf_1_1\\system_gpio_obuf_1_1.xci",
+            "inst_hier_path": "UART_tx/gpio_obuf_1",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "gpio_obuf",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "d_i": {
+                "direction": "I"
+              },
+              "d_o": {
+                "direction": "IO"
+              }
+            }
+          },
+          "gpio_obuf_0": {
+            "vlnv": "xilinx.com:module_ref:gpio_obuf:1.0",
+            "xci_name": "system_gpio_obuf_0_1",
+            "xci_path": "ip\\system_gpio_obuf_0_1\\system_gpio_obuf_0_1.xci",
+            "inst_hier_path": "UART_tx/gpio_obuf_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "gpio_obuf",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "d_i": {
+                "direction": "I"
+              },
+              "d_o": {
+                "direction": "IO"
+              }
+            }
+          },
+          "uart_tx_viewer_0": {
+            "vlnv": "xilinx.com:module_ref:uart_tx_viewer:1.0",
+            "xci_name": "system_uart_tx_viewer_0_0",
+            "xci_path": "ip\\system_uart_tx_viewer_0_0\\system_uart_tx_viewer_0_0.xci",
+            "inst_hier_path": "UART_tx/uart_tx_viewer_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "uart_tx_viewer",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "i_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "const_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "system_clk_in_bufg_0_0_o_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "led_1_reg_a": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "led_2_reg_b": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "reg_c": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "reg_p": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "i_addr": {
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "i_send_data": {
+                "direction": "I"
+              },
+              "i_tx_busy": {
+                "direction": "I"
+              },
+              "o_send_byte": {
+                "direction": "O"
+              },
+              "o_byte": {
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "o_sending": {
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "nets": {
+          "Net": {
+            "ports": [
+              "JA4",
+              "gpio_obuf_3/d_o"
+            ]
+          },
+          "Net1": {
+            "ports": [
+              "JA3",
+              "gpio_obuf_1/d_o"
+            ]
+          },
+          "Net2": {
+            "ports": [
+              "JC1",
+              "gpio_obuf_0/d_o"
+            ]
+          },
+          "i_addr_1": {
+            "ports": [
+              "i_addr",
+              "uart_tx_viewer_0/i_addr"
+            ]
+          },
+          "i_clk_1": {
+            "ports": [
+              "i_clk",
+              "uart_tx_0/i_clk",
+              "uart_tx_viewer_0/i_clk"
+            ]
+          },
+          "i_send_data_1": {
+            "ports": [
+              "i_send_data",
+              "uart_tx_viewer_0/i_send_data"
+            ]
+          },
+          "led_1_reg_a_1": {
+            "ports": [
+              "led_1_reg_a",
+              "uart_tx_viewer_0/led_1_reg_a"
+            ]
+          },
+          "led_2_reg_b_1": {
+            "ports": [
+              "led_2_reg_b",
+              "uart_tx_viewer_0/led_2_reg_b"
+            ]
+          },
+          "reg_c_1": {
+            "ports": [
+              "reg_c",
+              "uart_tx_viewer_0/reg_c"
+            ]
+          },
+          "reg_p_1": {
+            "ports": [
+              "reg_p",
+              "uart_tx_viewer_0/reg_p"
+            ]
+          },
+          "uart_tx_0_o_busy": {
+            "ports": [
+              "uart_tx_0/o_busy",
+              "gpio_obuf_3/d_i",
+              "uart_tx_viewer_0/i_tx_busy"
+            ]
+          },
+          "uart_tx_0_o_start_send": {
+            "ports": [
+              "uart_tx_0/o_start_send",
+              "gpio_obuf_1/d_i"
+            ]
+          },
+          "uart_tx_0_o_tx": {
+            "ports": [
+              "uart_tx_0/o_tx",
+              "gpio_obuf_0/d_i"
+            ]
+          },
+          "uart_tx_viewer_0_o_byte": {
+            "ports": [
+              "uart_tx_viewer_0/o_byte",
+              "uart_tx_0/i_data"
+            ]
+          },
+          "uart_tx_viewer_0_o_send_byte": {
+            "ports": [
+              "uart_tx_viewer_0/o_send_byte",
+              "uart_tx_0/i_send"
+            ]
+          },
+          "uart_tx_viewer_0_o_sending": {
+            "ports": [
+              "uart_tx_viewer_0/o_sending",
+              "LD10"
+            ]
+          }
+        }
+      },
+      "sys_register_0": {
+        "vlnv": "xilinx.com:module_ref:sys_register:1.0",
+        "xci_name": "system_sys_register_0_2",
+        "xci_path": "ip\\system_sys_register_0_2\\system_sys_register_0_2.xci",
+        "inst_hier_path": "sys_register_0",
+        "parameters": {
+          "ADDR": {
+            "value": "112"
+          },
+          "OUTWIDTH": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "sys_register",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "const_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "system_clk_in_bufg_0_0_o_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i_addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "i_load_data": {
+            "direction": "I"
+          },
+          "o_data": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "variable_clock_div_0": {
+        "vlnv": "xilinx.com:module_ref:variable_clock_div:1.0",
+        "xci_name": "system_variable_clock_div_0_0",
+        "xci_path": "ip\\system_variable_clock_div_0_0\\system_variable_clock_div_0_0.xci",
+        "inst_hier_path": "variable_clock_div_0",
+        "parameters": {
+          "COUNT_WIDTH": {
+            "value": "32"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "variable_clock_div",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "const_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "system_clk_in_bufg_0_0_o_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "COUNT": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "o_clk": {
+            "type": "clk",
+            "direction": "O",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "1500000"
+              }
+            }
+          }
+        }
+      },
+      "gpio_obuf_0": {
+        "vlnv": "xilinx.com:module_ref:gpio_obuf:1.0",
+        "xci_name": "system_gpio_obuf_0_2",
+        "xci_path": "ip\\system_gpio_obuf_0_2\\system_gpio_obuf_0_2.xci",
+        "inst_hier_path": "gpio_obuf_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "gpio_obuf",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "d_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "1500000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "system_variable_clock_div_0_0_o_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "d_o": {
+            "direction": "IO"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "JB7",
+          "gpio_obuf_0/d_o"
+        ]
+      },
+      "Net3": {
+        "ports": [
+          "JA4",
+          "UART_tx/JA4"
+        ]
+      },
+      "Net4": {
+        "ports": [
+          "JA1",
+          "UART_rx/idle"
+        ]
+      },
+      "Net5": {
+        "ports": [
+          "JC1",
+          "UART_tx/JC1"
+        ]
+      },
+      "Net6": {
+        "ports": [
+          "JA3",
+          "UART_tx/JA3"
+        ]
+      },
+      "UART_rx_f_viewing": {
+        "ports": [
+          "UART_rx/f_viewing",
+          "UART_tx/i_send_data"
+        ]
+      },
+      "UART_tx_LD10": {
+        "ports": [
+          "UART_tx/LD10",
+          "LD10"
+        ]
+      },
+      "clk_in_1": {
+        "ports": [
+          "clk_in",
+          "clk_in_bufg_0/i_clk"
+        ]
+      },
+      "clk_in_bufg_0_o_clk": {
+        "ports": [
+          "clk_in_bufg_0/o_clk",
+          "clocks/i_clk",
+          "UART_rx/clk_in",
+          "hex_display_0/i_clk",
+          "led_1_reg_a/i_clk",
+          "led_2_reg_b/i_clk",
+          "reg_c/i_clk",
+          "UART_tx/i_clk",
+          "sys_register_0/i_clk",
+          "variable_clock_div_0/i_clk"
+        ]
+      },
+      "clocks_LD2": {
+        "ports": [
+          "clocks/led_clk",
+          "LD14"
+        ]
+      },
+      "gpio_input_0_data_out": {
+        "ports": [
+          "JC2",
+          "LD15",
+          "UART_rx/i_rx"
+        ]
+      },
+      "hex_display_0_a": {
+        "ports": [
+          "hex_display_0/a",
+          "CA"
+        ]
+      },
+      "hex_display_0_b": {
+        "ports": [
+          "hex_display_0/b",
+          "CB"
+        ]
+      },
+      "hex_display_0_c": {
+        "ports": [
+          "hex_display_0/c",
+          "CC"
+        ]
+      },
+      "hex_display_0_d": {
+        "ports": [
+          "hex_display_0/d",
+          "CD"
+        ]
+      },
+      "hex_display_0_da": {
+        "ports": [
+          "hex_display_0/da",
+          "AN0"
+        ]
+      },
+      "hex_display_0_db": {
+        "ports": [
+          "hex_display_0/db",
+          "AN1"
+        ]
+      },
+      "hex_display_0_dc": {
+        "ports": [
+          "hex_display_0/dc",
+          "AN2"
+        ]
+      },
+      "hex_display_0_dd": {
+        "ports": [
+          "hex_display_0/dd",
+          "AN3"
+        ]
+      },
+      "hex_display_0_dp": {
+        "ports": [
+          "hex_display_0/dp",
+          "DP"
+        ]
+      },
+      "hex_display_0_e": {
+        "ports": [
+          "hex_display_0/e",
+          "CE"
+        ]
+      },
+      "hex_display_0_f": {
+        "ports": [
+          "hex_display_0/f",
+          "CF"
+        ]
+      },
+      "hex_display_0_g": {
+        "ports": [
+          "hex_display_0/g",
+          "CG"
+        ]
+      },
+      "outsplitter_0_a": {
+        "ports": [
+          "outsplitter_0/a",
+          "LD0"
+        ]
+      },
+      "outsplitter_0_b": {
+        "ports": [
+          "outsplitter_0/b",
+          "LD1"
+        ]
+      },
+      "outsplitter_0_c": {
+        "ports": [
+          "outsplitter_0/c",
+          "LD2"
+        ]
+      },
+      "outsplitter_0_d": {
+        "ports": [
+          "outsplitter_0/d",
+          "LD3"
+        ]
+      },
+      "outsplitter_0_e": {
+        "ports": [
+          "outsplitter_0/e",
+          "LD4"
+        ]
+      },
+      "outsplitter_0_f": {
+        "ports": [
+          "outsplitter_0/f",
+          "LD5"
+        ]
+      },
+      "outsplitter_0_g": {
+        "ports": [
+          "outsplitter_0/g",
+          "LD6"
+        ]
+      },
+      "outsplitter_0_h": {
+        "ports": [
+          "outsplitter_0/h",
+          "LD7"
+        ]
+      },
+      "reg_c_o_data": {
+        "ports": [
+          "reg_c/o_data",
+          "UART_tx/reg_c"
+        ]
+      },
+      "sys_register_0_o_data": {
+        "ports": [
+          "led_1_reg_a/o_data",
+          "LD12",
+          "UART_tx/led_1_reg_a"
+        ]
+      },
+      "sys_register_0_o_data1": {
+        "ports": [
+          "sys_register_0/o_data",
+          "variable_clock_div_0/COUNT",
+          "UART_tx/reg_p"
+        ]
+      },
+      "sys_register_1_o_data": {
+        "ports": [
+          "led_2_reg_b/o_data",
+          "LD13",
+          "UART_tx/led_2_reg_b"
+        ]
+      },
+      "uart_rx_interpreter_0_o_new_edit": {
+        "ports": [
+          "UART_rx/o_new_edit",
+          "led_1_reg_a/i_load_data",
+          "led_2_reg_b/i_load_data",
+          "reg_c/i_load_data",
+          "sys_register_0/i_load_data"
+        ]
+      },
+      "uart_rx_interpreter_0_o_waddr": {
+        "ports": [
+          "UART_rx/o_waddr",
+          "outsplitter_0/i_byte",
+          "led_1_reg_a/i_addr",
+          "led_2_reg_b/i_addr",
+          "reg_c/i_addr",
+          "UART_tx/i_addr",
+          "sys_register_0/i_addr"
+        ]
+      },
+      "uart_rx_interpreter_0_o_wdata": {
+        "ports": [
+          "UART_rx/o_wdata",
+          "hex_display_0/i_data",
+          "led_1_reg_a/i_data",
+          "led_2_reg_b/i_data",
+          "reg_c/i_data",
+          "sys_register_0/i_data"
+        ]
+      },
+      "variable_clock_div_0_o_clk": {
+        "ports": [
+          "variable_clock_div_0/o_clk",
+          "gpio_obuf_0/d_i"
+        ]
+      }
+    }
+  }
+}

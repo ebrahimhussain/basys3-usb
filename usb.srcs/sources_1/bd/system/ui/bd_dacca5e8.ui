@@ -1,0 +1,38 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.987025",
+   "Default View_TopLeft":"-93,-58",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_clk_in -pg 1 -lvl 0 -x -10 -y 360 -defaultsOSRD
+preplace port port-id_i_rx -pg 1 -lvl 0 -x -10 -y 280 -defaultsOSRD
+preplace port port-id_rx_clk -pg 1 -lvl 4 -x 850 -y 60 -defaultsOSRD
+preplace port port-id_idle -pg 1 -lvl 4 -x 850 -y 160 -defaultsOSRD
+preplace port port-id_o_idle -pg 1 -lvl 4 -x 850 -y 490 -defaultsOSRD
+preplace port port-id_o_new_edit -pg 1 -lvl 4 -x 850 -y 330 -defaultsOSRD
+preplace port port-id_f_viewing -pg 1 -lvl 4 -x 850 -y 370 -defaultsOSRD
+preplace portBus o_waddr -pg 1 -lvl 4 -x 850 -y 260 -defaultsOSRD
+preplace portBus o_wdata -pg 1 -lvl 4 -x 850 -y 290 -defaultsOSRD
+preplace inst gpio_obuf_4 -pg 1 -lvl 2 -x 390 -y 60 -defaultsOSRD
+preplace inst gpio_obuf_3 -pg 1 -lvl 2 -x 390 -y 160 -defaultsOSRD
+preplace inst uart_rx_0 -pg 1 -lvl 1 -x 130 -y 350 -defaultsOSRD
+preplace inst uart_rx_reg_0 -pg 1 -lvl 2 -x 390 -y 340 -defaultsOSRD
+preplace inst uart_rx_interpreter_0 -pg 1 -lvl 3 -x 680 -y 320 -defaultsOSRD
+preplace netloc JC2_1 1 0 2 20 270 250
+preplace netloc Net 1 2 2 NJ 60 N
+preplace netloc Net1 1 2 2 NJ 160 N
+preplace netloc clk_in_1 1 0 3 10J 260 N 260 510
+preplace netloc uart_rx_0_o_idle 1 1 3 260 490 N 490 N
+preplace netloc uart_rx_0_rx_clk 1 1 1 240 60n
+preplace netloc uart_rx_interpreter_0_o_new_edit 1 3 1 NJ 330
+preplace netloc uart_rx_0_o_new_byte 1 1 2 240J 420 510
+preplace netloc uart_rx_reg_0_o_rx_byte 1 2 1 N 340
+preplace netloc uart_rx_interpreter_0_o_waddr 1 3 1 820J 260n
+preplace netloc uart_rx_interpreter_0_o_wdata 1 3 1 NJ 290
+preplace netloc uart_rx_interpreter_0_f_viewing 1 3 1 NJ 370
+levelinfo -pg 1 -10 130 390 680 850
+pagesize -pg 1 -db -bbox -sgen -100 0 990 510
+"
+}
+0
