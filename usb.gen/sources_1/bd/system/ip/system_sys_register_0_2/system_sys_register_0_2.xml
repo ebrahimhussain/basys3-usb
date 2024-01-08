@@ -106,7 +106,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cefbd16c</spirit:value>
+            <spirit:value>9:3f058c9c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -117,7 +117,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cefbd16c</spirit:value>
+            <spirit:value>9:3f058c9c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -133,11 +133,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Jan 07 11:18:17 UTC 2024</spirit:value>
+            <spirit:value>Sun Jan 07 12:43:22 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cefbd16c</spirit:value>
+            <spirit:value>9:3f058c9c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -149,7 +149,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e2a29e9b</spirit:value>
+            <spirit:value>9:a70e434e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -165,11 +165,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Jan 07 11:18:17 UTC 2024</spirit:value>
+            <spirit:value>Sun Jan 07 12:43:22 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e2a29e9b</spirit:value>
+            <spirit:value>9:a70e434e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -183,11 +183,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Jan 07 11:19:04 UTC 2024</spirit:value>
+            <spirit:value>Sun Jan 07 12:44:13 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cefbd16c</spirit:value>
+            <spirit:value>9:3f058c9c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -258,7 +258,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.OUTWIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.OUTWIDTH&apos;)) - 1)">6</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -275,7 +275,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>OUTWIDTH</spirit:name>
         <spirit:displayName>Outwidth</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.OUTWIDTH">32</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.OUTWIDTH">7</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>ADDR</spirit:name>
@@ -343,7 +343,7 @@
     <spirit:parameter>
       <spirit:name>OUTWIDTH</spirit:name>
       <spirit:displayName>Outwidth</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.OUTWIDTH">32</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.OUTWIDTH">7</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADDR</spirit:name>

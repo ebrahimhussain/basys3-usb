@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Sun Jan  7 03:18:17 2024
+//Date        : Sun Jan  7 21:45:26 2024
 //Host        : ebrahim running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -117,9 +117,9 @@ module system_wrapper
   inout JA7;
   inout JA8;
   inout JA9;
-  inout JB1;
+  input JB1;
   inout JB10;
-  inout JB2;
+  input JB2;
   inout JB3;
   inout JB4;
   inout JB7;

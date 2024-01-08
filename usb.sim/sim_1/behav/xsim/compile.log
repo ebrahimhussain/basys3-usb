@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ehussain/Desktop/Projects/usb/rtl/usb_dll.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module usb_dll
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ehussain/Desktop/Projects/usb/sim/dll_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dll_sim

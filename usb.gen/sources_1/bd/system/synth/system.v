@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Sun Jan  7 03:18:17 2024
+//Date        : Sun Jan  7 21:45:26 2024
 //Host        : ebrahim running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
@@ -98,7 +98,7 @@ module UART_tx_imp_JZ25II
   input [0:0]led_1_reg_a;
   input [0:0]led_2_reg_b;
   input [31:0]reg_c;
-  input [31:0]reg_p;
+  input [6:0]reg_p;
 
   wire Net;
   wire Net1;
@@ -109,7 +109,7 @@ module UART_tx_imp_JZ25II
   wire [0:0]led_1_reg_a_1;
   wire [0:0]led_2_reg_b_1;
   wire [31:0]reg_c_1;
-  wire [31:0]reg_p_1;
+  wire [6:0]reg_p_1;
   wire uart_tx_0_o_busy;
   wire uart_tx_0_o_start_send;
   wire uart_tx_0_o_tx;
@@ -124,7 +124,7 @@ module UART_tx_imp_JZ25II
   assign led_1_reg_a_1 = led_1_reg_a[0];
   assign led_2_reg_b_1 = led_2_reg_b[0];
   assign reg_c_1 = reg_c[31:0];
-  assign reg_p_1 = reg_p[31:0];
+  assign reg_p_1 = reg_p[6:0];
   system_gpio_obuf_0_1 gpio_obuf_0
        (.d_i(uart_tx_0_o_tx),
         .d_o(JC1));
@@ -152,7 +152,7 @@ module UART_tx_imp_JZ25II
         .o_send_byte(uart_tx_viewer_0_o_send_byte),
         .o_sending(uart_tx_viewer_0_o_sending),
         .reg_c(reg_c_1),
-        .reg_p(reg_p_1));
+        .reg_p({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,reg_p_1}));
 endmodule
 
 module clocks_imp_1VOSGIY
@@ -284,9 +284,9 @@ module system
   inout JA7;
   inout JA8;
   inout JA9;
-  inout JB1;
+  input JB1;
   inout JB10;
-  inout JB2;
+  input JB2;
   inout JB3;
   inout JB4;
   inout JB7;
@@ -342,6 +342,7 @@ module system
   input SW9;
   input clk_in;
 
+  wire JB2_1;
   wire Net;
   wire Net3;
   wire Net4;
@@ -375,12 +376,12 @@ module system
   wire outsplitter_0_h;
   wire [31:0]reg_c_o_data;
   wire [0:0]sys_register_0_o_data;
-  wire [31:0]sys_register_0_o_data1;
+  wire [6:0]sys_register_0_o_data1;
   wire [0:0]sys_register_1_o_data;
   wire uart_rx_interpreter_0_o_new_edit;
   wire [7:0]uart_rx_interpreter_0_o_waddr;
   wire [31:0]uart_rx_interpreter_0_o_wdata;
-  wire variable_clock_div_0_o_clk;
+  wire usb_dll_0_o_usb_clk;
 
   assign AN0 = hex_display_0_da;
   assign AN1 = hex_display_0_db;
@@ -394,9 +395,11 @@ module system
   assign CF = hex_display_0_f;
   assign CG = hex_display_0_g;
   assign DP = hex_display_0_dp;
+  assign JB2_1 = JB2;
   assign LD0 = outsplitter_0_a;
   assign LD1 = outsplitter_0_b;
   assign LD10 = UART_tx_LD10;
+  assign LD11 = JB2_1;
   assign LD12[0] = sys_register_0_o_data;
   assign LD13[0] = sys_register_1_o_data;
   assign LD14 = clocks_LD2;
@@ -435,8 +438,14 @@ module system
   clocks_imp_1VOSGIY clocks
        (.i_clk(clk_in_bufg_0_o_clk),
         .led_clk(clocks_LD2));
+  system_sys_register_0_2 dll_phase_reg_p
+       (.i_addr(uart_rx_interpreter_0_o_waddr),
+        .i_clk(clk_in_bufg_0_o_clk),
+        .i_data(uart_rx_interpreter_0_o_wdata),
+        .i_load_data(uart_rx_interpreter_0_o_new_edit),
+        .o_data(sys_register_0_o_data1));
   system_gpio_obuf_0_2 gpio_obuf_0
-       (.d_i(variable_clock_div_0_o_clk),
+       (.d_i(usb_dll_0_o_usb_clk),
         .d_o(JB7));
   system_hex_display_0_0 hex_display_0
        (.a(hex_display_0_a),
@@ -481,14 +490,9 @@ module system
         .i_data(uart_rx_interpreter_0_o_wdata),
         .i_load_data(uart_rx_interpreter_0_o_new_edit),
         .o_data(reg_c_o_data));
-  system_sys_register_0_2 sys_register_0
-       (.i_addr(uart_rx_interpreter_0_o_waddr),
-        .i_clk(clk_in_bufg_0_o_clk),
-        .i_data(uart_rx_interpreter_0_o_wdata),
-        .i_load_data(uart_rx_interpreter_0_o_new_edit),
-        .o_data(sys_register_0_o_data1));
-  system_variable_clock_div_0_0 variable_clock_div_0
-       (.COUNT(sys_register_0_o_data1),
-        .i_clk(clk_in_bufg_0_o_clk),
-        .o_clk(variable_clock_div_0_o_clk));
+  system_usb_dll_0_0 usb_dll_0
+       (.i_clk(clk_in_bufg_0_o_clk),
+        .i_data(JB2_1),
+        .i_phase_set(sys_register_0_o_data1),
+        .o_usb_clk(usb_dll_0_o_usb_clk));
 endmodule

@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "sys_register,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "system_sys_register_0_2,sys_register,{}" *)
-(* CORE_GENERATION_INFO = "system_sys_register_0_2,sys_register,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=sys_register,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,OUTWIDTH=32,ADDR=112}" *)
+(* CORE_GENERATION_INFO = "system_sys_register_0_2,sys_register,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=sys_register,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,OUTWIDTH=7,ADDR=112}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module system_sys_register_0_2 (
@@ -69,10 +69,10 @@ input wire i_clk;
 input wire [31 : 0] i_data;
 input wire [7 : 0] i_addr;
 input wire i_load_data;
-output wire [31 : 0] o_data;
+output wire [6 : 0] o_data;
 
   sys_register #(
-    .OUTWIDTH(32),
+    .OUTWIDTH(7),
     .ADDR(112)
   ) inst (
     .i_clk(i_clk),

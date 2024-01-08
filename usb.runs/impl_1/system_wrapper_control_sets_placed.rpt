@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Sun Jan  7 03:20:37 2024
+| Date         : Sun Jan  7 21:47:39 2024
 | Host         : ebrahim running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file system_wrapper_control_sets_placed.rpt
 | Design       : system_wrapper
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    24 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    34 |
+| Unused register locations in slices containing registers |    42 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -41,13 +41,13 @@ Table of Contents
 +--------------------+-------+
 | Total control sets |    24 |
 | >= 0 to < 4        |     0 |
-| >= 4 to < 6        |     4 |
-| >= 6 to < 8        |     2 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     3 |
 | >= 8 to < 10       |     2 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     2 |
-| >= 16              |    14 |
+| >= 16              |    12 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              61 |           22 |
+| No           | No                    | No                     |              66 |           23 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             143 |           38 |
-| Yes          | No                    | No                     |             165 |           45 |
+| No           | Yes                   | No                     |             115 |           31 |
+| Yes          | No                    | No                     |             140 |           31 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             165 |           37 |
+| Yes          | Yes                   | No                     |             165 |           34 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,30 +73,30 @@ Table of Contents
 +---------------------------------------------------+-------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+--------------+
 |                    Clock Signal                   |                              Enable Signal                              |                           Set/Reset Signal                           | Slice Load Count | Bel Load Count | Bels / Slice |
 +---------------------------------------------------+-------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+--------------+
+|  system_i/clk_in_bufg_0/inst/o_clk                |                                                                         | system_i/usb_dll_0/inst/usb_clk_counter[5]_i_1_n_0                   |                1 |              4 |         4.00 |
 |  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_rx/uart_rx_interpreter_0/inst/ascii_to_hex_reg[3]_i_1_n_0 |                                                                      |                1 |              4 |         4.00 |
 |  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_tx/uart_tx_viewer_0/inst/data[3]_i_1_n_0                  | system_i/UART_tx/uart_tx_viewer_0/inst/data1                         |                1 |              4 |         4.00 |
 |  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_rx/uart_rx_interpreter_0/inst/byte_counter[4]_i_1_n_0     |                                                                      |                2 |              5 |         2.50 |
 |  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_tx/uart_tx_viewer_0/inst/bytes_sent_counter[4]_i_2_n_0    | system_i/UART_tx/uart_tx_viewer_0/inst/bytes_sent_counter[4]_i_1_n_0 |                2 |              5 |         2.50 |
+|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/dll_phase_reg_p/inst/data[6]_i_1_n_0                           |                                                                      |                1 |              7 |         7.00 |
 |  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_tx/uart_tx_0/inst/data[7]_i_2_n_0                         | system_i/UART_tx/uart_tx_0/inst/sending0                             |                1 |              7 |         7.00 |
 |  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_tx/uart_tx_viewer_0/inst/data1                            | system_i/UART_tx/uart_tx_viewer_0/inst/byte                          |                1 |              7 |         7.00 |
-|  system_i/UART_rx/uart_rx_0/inst/idle_reg_0       |                                                                         |                                                                      |                1 |              8 |         8.00 |
+|  system_i/UART_rx/uart_rx_0/inst/idle_reg_0       |                                                                         |                                                                      |                3 |              8 |         2.67 |
 |  system_i/UART_rx/uart_rx_0/inst/rx_clk_reg_reg_0 |                                                                         |                                                                      |                2 |              9 |         4.50 |
 |  system_i/clk_in_bufg_0/inst/o_clk                |                                                                         | system_i/UART_tx/uart_tx_0/inst/tx_clk_counter[15]_i_1_n_0           |                4 |             15 |         3.75 |
 |  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_rx/uart_rx_0/inst/bits_0                                  | system_i/UART_rx/uart_rx_0/inst/bits[15]_i_1_n_0                     |                4 |             15 |         3.75 |
-|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_rx/uart_rx_interpreter_0/inst/waddr                       |                                                                      |                3 |             16 |         5.33 |
-|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/hex_display_0/inst/disp_reg_0                                  |                                                                      |                5 |             16 |         3.20 |
+|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/hex_display_0/inst/disp_reg_0                                  |                                                                      |                4 |             16 |         4.00 |
+|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_rx/uart_rx_interpreter_0/inst/waddr                       |                                                                      |                4 |             16 |         4.00 |
 |  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_tx/uart_tx_0/inst/bit_counter0                            | system_i/UART_tx/uart_tx_0/inst/bit_counter                          |                4 |             16 |         4.00 |
-|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_tx/uart_tx_viewer_0/inst/data[31]_i_1_n_0                 |                                                                      |               11 |             28 |         2.55 |
+|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_tx/uart_tx_viewer_0/inst/data[31]_i_1_n_0                 |                                                                      |                8 |             28 |         3.50 |
 |  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_rx/uart_rx_0/inst/rx_clk_counter                          | system_i/UART_rx/uart_rx_0/inst/rx_clk_counter[31]_i_1_n_0           |                8 |             31 |         3.88 |
 |  system_i/clk_in_bufg_0/inst/o_clk                |                                                                         | system_i/hex_display_0/inst/digit_counter[31]_i_1_n_0                |                9 |             32 |         3.56 |
 |  system_i/clk_in_bufg_0/inst/o_clk                |                                                                         | system_i/hex_display_0/inst/half_counter[31]_i_1_n_0                 |                9 |             32 |         3.56 |
-|  system_i/clk_in_bufg_0/inst/o_clk                |                                                                         | system_i/variable_clock_div_0/inst/clear                             |                8 |             32 |         4.00 |
 |  system_i/clk_in_bufg_0/inst/o_clk                |                                                                         | system_i/clocks/clock_1h/inst/clear                                  |                8 |             32 |         4.00 |
-|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_rx/uart_rx_interpreter_0/inst/editing_reg_0               |                                                                      |                8 |             32 |         4.00 |
-|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/reg_c/inst/data[31]_i_1_n_0                                    |                                                                      |                9 |             32 |         3.56 |
-|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/sys_register_0/inst/data[31]_i_1_n_0                           |                                                                      |                6 |             32 |         5.33 |
-|  system_i/clk_in_bufg_0/inst/o_clk                |                                                                         |                                                                      |               19 |             44 |         2.32 |
-|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_rx/uart_rx_interpreter_0/inst/rx_shift_reg[79]_i_2_n_0    | system_i/UART_rx/uart_rx_interpreter_0/inst/rx_shift_reg[79]_i_1_n_0 |               16 |             80 |         5.00 |
+|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/reg_c/inst/data[31]_i_1_n_0                                    |                                                                      |                7 |             32 |         4.57 |
+|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_rx/uart_rx_interpreter_0/inst/editing_reg_0               |                                                                      |                4 |             32 |         8.00 |
+|  system_i/clk_in_bufg_0/inst/o_clk                |                                                                         |                                                                      |               18 |             49 |         2.72 |
+|  system_i/clk_in_bufg_0/inst/o_clk                | system_i/UART_rx/uart_rx_interpreter_0/inst/rx_shift_reg[79]_i_2_n_0    | system_i/UART_rx/uart_rx_interpreter_0/inst/rx_shift_reg[79]_i_1_n_0 |               13 |             80 |         6.15 |
 +---------------------------------------------------+-------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+--------------+
 
 

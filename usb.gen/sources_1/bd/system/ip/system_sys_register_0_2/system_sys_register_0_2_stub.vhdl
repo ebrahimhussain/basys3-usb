@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Sun Jan  7 03:19:04 2024
+-- Date        : Sun Jan  7 04:44:13 2024
 -- Host        : ebrahim running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/ehussain/Desktop/Projects/usb/usb.gen/sources_1/bd/system/ip/system_sys_register_0_2/system_sys_register_0_2_stub.vhdl
@@ -18,7 +18,7 @@ entity system_sys_register_0_2 is
     i_data : in STD_LOGIC_VECTOR ( 31 downto 0 );
     i_addr : in STD_LOGIC_VECTOR ( 7 downto 0 );
     i_load_data : in STD_LOGIC;
-    o_data : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    o_data : out STD_LOGIC_VECTOR ( 6 downto 0 )
   );
 
 end system_sys_register_0_2;
@@ -27,7 +27,7 @@ architecture stub of system_sys_register_0_2 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "i_clk,i_data[31:0],i_addr[7:0],i_load_data,o_data[31:0]";
+attribute black_box_pad_pin of stub : architecture is "i_clk,i_data[31:0],i_addr[7:0],i_load_data,o_data[6:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "sys_register,Vivado 2022.1";
 begin

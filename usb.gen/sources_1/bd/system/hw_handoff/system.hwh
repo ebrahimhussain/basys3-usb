@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jan  7 03:18:17 2024" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jan  7 21:45:26 2024" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:basys3:part0:1.2" DEVICE="7a35t" NAME="system" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -132,7 +132,11 @@
         <CONNECTION INSTANCE="UART_tx_uart_tx_viewer_0" PORT="o_sending"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="LD11" SIGIS="undef"/>
+    <PORT DIR="O" NAME="LD11" SIGIS="undef" SIGNAME="External_Ports_JB2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="JB2"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="O" LEFT="0" NAME="LD12" RIGHT="0" SIGIS="undef" SIGNAME="led_1_reg_a_o_data">
       <CONNECTIONS>
         <CONNECTION INSTANCE="led_1_reg_a" PORT="o_data"/>
@@ -173,8 +177,6 @@
     <PORT DIR="IO" NAME="JA8" SIGIS="undef"/>
     <PORT DIR="IO" NAME="JA9" SIGIS="undef"/>
     <PORT DIR="IO" NAME="JA10" SIGIS="undef"/>
-    <PORT DIR="IO" NAME="JB1" SIGIS="undef"/>
-    <PORT DIR="IO" NAME="JB2" SIGIS="undef"/>
     <PORT DIR="IO" NAME="JB3" SIGIS="undef"/>
     <PORT DIR="IO" NAME="JB4" SIGIS="undef"/>
     <PORT DIR="IO" NAME="JB7" SIGIS="undef" SIGNAME="External_Ports_JB7">
@@ -214,6 +216,13 @@
         <CONNECTION INSTANCE="External_Ports" PORT="LD15"/>
         <CONNECTION INSTANCE="UART_rx_uart_rx_0" PORT="i_rx"/>
         <CONNECTION INSTANCE="UART_rx_uart_rx_reg_0" PORT="i_rx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="JB1" SIGIS="undef"/>
+    <PORT DIR="I" NAME="JB2" SIGIS="undef" SIGNAME="External_Ports_JB2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="LD11"/>
+        <CONNECTION INSTANCE="usb_dll_0" PORT="i_data"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -328,7 +337,7 @@
             <CONNECTION INSTANCE="led_2_reg_b" PORT="i_addr"/>
             <CONNECTION INSTANCE="reg_c" PORT="i_addr"/>
             <CONNECTION INSTANCE="UART_tx_uart_tx_viewer_0" PORT="i_addr"/>
-            <CONNECTION INSTANCE="sys_register_0" PORT="i_addr"/>
+            <CONNECTION INSTANCE="dll_phase_reg_p" PORT="i_addr"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="o_wdata" RIGHT="0" SIGIS="undef" SIGNAME="UART_rx_uart_rx_interpreter_0_o_wdata">
@@ -337,7 +346,7 @@
             <CONNECTION INSTANCE="led_1_reg_a" PORT="i_data"/>
             <CONNECTION INSTANCE="led_2_reg_b" PORT="i_data"/>
             <CONNECTION INSTANCE="reg_c" PORT="i_data"/>
-            <CONNECTION INSTANCE="sys_register_0" PORT="i_data"/>
+            <CONNECTION INSTANCE="dll_phase_reg_p" PORT="i_data"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="o_cmd" RIGHT="0" SIGIS="undef"/>
@@ -346,7 +355,7 @@
             <CONNECTION INSTANCE="led_1_reg_a" PORT="i_load_data"/>
             <CONNECTION INSTANCE="led_2_reg_b" PORT="i_load_data"/>
             <CONNECTION INSTANCE="reg_c" PORT="i_load_data"/>
-            <CONNECTION INSTANCE="sys_register_0" PORT="i_load_data"/>
+            <CONNECTION INSTANCE="dll_phase_reg_p" PORT="i_load_data"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="f_editing" SIGIS="undef"/>
@@ -517,9 +526,9 @@
             <CONNECTION INSTANCE="reg_c" PORT="o_data"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="reg_p" RIGHT="0" SIGIS="undef" SIGNAME="sys_register_0_o_data">
+        <PORT DIR="I" LEFT="31" NAME="reg_p" RIGHT="0" SIGIS="undef" SIGNAME="dll_phase_reg_p_o_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="sys_register_0" PORT="o_data"/>
+            <CONNECTION INSTANCE="dll_phase_reg_p" PORT="o_data"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="7" NAME="i_addr" RIGHT="0" SIGIS="undef" SIGNAME="UART_rx_uart_rx_interpreter_0_o_waddr">
@@ -578,8 +587,8 @@
             <CONNECTION INSTANCE="reg_c" PORT="i_clk"/>
             <CONNECTION INSTANCE="UART_tx_uart_tx_0" PORT="i_clk"/>
             <CONNECTION INSTANCE="UART_tx_uart_tx_viewer_0" PORT="i_clk"/>
-            <CONNECTION INSTANCE="sys_register_0" PORT="i_clk"/>
-            <CONNECTION INSTANCE="variable_clock_div_0" PORT="i_clk"/>
+            <CONNECTION INSTANCE="dll_phase_reg_p" PORT="i_clk"/>
+            <CONNECTION INSTANCE="usb_dll_0" PORT="i_clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -628,6 +637,44 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/dll_phase_reg_p" HWVERSION="1.0" INSTANCE="dll_phase_reg_p" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="sys_register" VLNV="xilinx.com:module_ref:sys_register:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="OUTWIDTH" VALUE="7"/>
+        <PARAMETER NAME="ADDR" VALUE="112"/>
+        <PARAMETER NAME="Component_Name" VALUE="system_sys_register_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_clk" SIGIS="clk" SIGNAME="clk_in_bufg_0_o_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_in_bufg_0" PORT="o_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_data" RIGHT="0" SIGIS="undef" SIGNAME="UART_rx_uart_rx_interpreter_0_o_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_rx_uart_rx_interpreter_0" PORT="o_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="i_addr" RIGHT="0" SIGIS="undef" SIGNAME="UART_rx_uart_rx_interpreter_0_o_waddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_rx_uart_rx_interpreter_0" PORT="o_waddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_load_data" SIGIS="undef" SIGNAME="UART_rx_uart_rx_interpreter_0_o_new_edit">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_rx_uart_rx_interpreter_0" PORT="o_new_edit"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="o_data" RIGHT="0" SIGIS="undef" SIGNAME="dll_phase_reg_p_o_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_tx_uart_tx_viewer_0" PORT="reg_p"/>
+            <CONNECTION INSTANCE="usb_dll_0" PORT="i_phase_set"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/gpio_obuf_0" HWVERSION="1.0" INSTANCE="gpio_obuf_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="gpio_obuf" VLNV="xilinx.com:module_ref:gpio_obuf:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -635,9 +682,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="d_i" SIGIS="undef" SIGNAME="variable_clock_div_0_o_clk">
+        <PORT DIR="I" NAME="d_i" SIGIS="undef" SIGNAME="usb_dll_0_o_usb_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="variable_clock_div_0" PORT="o_clk"/>
+            <CONNECTION INSTANCE="usb_dll_0" PORT="o_usb_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" NAME="d_o" SIGIS="undef" SIGNAME="External_Ports_JB7">
@@ -898,12 +945,10 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/sys_register_0" HWVERSION="1.0" INSTANCE="sys_register_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="sys_register" VLNV="xilinx.com:module_ref:sys_register:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/usb_dll_0" HWVERSION="1.0" INSTANCE="usb_dll_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="usb_dll" VLNV="xilinx.com:module_ref:usb_dll:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="OUTWIDTH" VALUE="32"/>
-        <PARAMETER NAME="ADDR" VALUE="112"/>
-        <PARAMETER NAME="Component_Name" VALUE="system_sys_register_0_2"/>
+        <PARAMETER NAME="Component_Name" VALUE="system_usb_dll_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -912,49 +957,19 @@
             <CONNECTION INSTANCE="clk_in_bufg_0" PORT="o_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="i_data" RIGHT="0" SIGIS="undef" SIGNAME="UART_rx_uart_rx_interpreter_0_o_wdata">
+        <PORT DIR="I" NAME="i_data" SIGIS="undef" SIGNAME="External_Ports_JB2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="UART_rx_uart_rx_interpreter_0" PORT="o_wdata"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="JB2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="i_addr" RIGHT="0" SIGIS="undef" SIGNAME="UART_rx_uart_rx_interpreter_0_o_waddr">
+        <PORT DIR="I" LEFT="6" NAME="i_phase_set" RIGHT="0" SIGIS="undef" SIGNAME="dll_phase_reg_p_o_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="UART_rx_uart_rx_interpreter_0" PORT="o_waddr"/>
+            <CONNECTION INSTANCE="dll_phase_reg_p" PORT="o_data"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="i_load_data" SIGIS="undef" SIGNAME="UART_rx_uart_rx_interpreter_0_o_new_edit">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="UART_rx_uart_rx_interpreter_0" PORT="o_new_edit"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="o_data" RIGHT="0" SIGIS="undef" SIGNAME="sys_register_0_o_data">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="variable_clock_div_0" PORT="COUNT"/>
-            <CONNECTION INSTANCE="UART_tx_uart_tx_viewer_0" PORT="reg_p"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/variable_clock_div_0" HWVERSION="1.0" INSTANCE="variable_clock_div_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="variable_clock_div" VLNV="xilinx.com:module_ref:variable_clock_div:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="COUNT_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="Component_Name" VALUE="system_variable_clock_div_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_clk" SIGIS="clk" SIGNAME="clk_in_bufg_0_o_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_in_bufg_0" PORT="o_clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="COUNT" RIGHT="0" SIGIS="undef" SIGNAME="sys_register_0_o_data">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="sys_register_0" PORT="o_data"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="1500000" DIR="O" NAME="o_clk" SIGIS="clk" SIGNAME="variable_clock_div_0_o_clk">
+        <PORT DIR="O" LEFT="6" NAME="count" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="edgedetect" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="1500000" DIR="O" NAME="o_usb_clk" SIGIS="clk" SIGNAME="usb_dll_0_o_usb_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="gpio_obuf_0" PORT="d_i"/>
           </CONNECTIONS>

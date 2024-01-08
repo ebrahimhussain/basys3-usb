@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Sun Jan  7 03:18:32 2024
-# Process ID: 58988
+# Start of session at: Sun Jan  7 04:43:38 2024
+# Process ID: 17480
 # Current directory: C:/Users/ehussain/Desktop/Projects/usb/usb.runs/system_sys_register_0_2_synth_1
 # Command line: vivado.exe -log system_sys_register_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_sys_register_0_2.tcl
 # Log file: C:/Users/ehussain/Desktop/Projects/usb/usb.runs/system_sys_register_0_2_synth_1/system_sys_register_0_2.vds
@@ -21,30 +21,55 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 57384
+INFO: [Synth 8-7075] Helper process launched with PID 45784
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'system_sys_register_0_2' [c:/Users/ehussain/Desktop/Projects/usb/usb.gen/sources_1/bd/system/ip/system_sys_register_0_2/synth/system_sys_register_0_2.v:53]
 INFO: [Synth 8-6157] synthesizing module 'sys_register' [C:/Users/ehussain/Desktop/Projects/usb/rtl/sys_register.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'sys_register' (0#1) [C:/Users/ehussain/Desktop/Projects/usb/rtl/sys_register.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'system_sys_register_0_2' (0#1) [c:/Users/ehussain/Desktop/Projects/usb/usb.gen/sources_1/bd/system/ip/system_sys_register_0_2/synth/system_sys_register_0_2.v:53]
+WARNING: [Synth 8-7129] Port i_data[31] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[30] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[29] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[28] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[27] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[26] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[25] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[24] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[23] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[22] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[21] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[20] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[19] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[18] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[17] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[16] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[15] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[14] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[13] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[12] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[11] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[10] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[9] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[8] in module sys_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[7] in module sys_register is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1294.332 ; gain = 0.000
----------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.812 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -52,7 +77,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -70,21 +95,46 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port i_data[31] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[30] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[29] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[28] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[27] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[26] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[25] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[24] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[23] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[22] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[21] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[20] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[19] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[18] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[17] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[16] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[15] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[14] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[13] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[12] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[11] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[10] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[9] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[8] in module system_sys_register_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[7] in module system_sys_register_0_2 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -102,37 +152,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -150,39 +200,39 @@ Report Cell Usage:
 +------+-----+------+
 |1     |LUT4 |     1|
 |2     |LUT6 |     1|
-|3     |FDRE |    32|
+|3     |FDRE |     7|
 +------+-----+------+
 
 Report Instance Areas: 
 +------+---------+-------------+------+
 |      |Instance |Module       |Cells |
 +------+---------+-------------+------+
-|1     |top      |             |    34|
-|2     |  inst   |sys_register |    34|
+|1     |top      |             |     9|
+|2     |  inst   |sys_register |     9|
 +------+---------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1285.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1294.332 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Synthesis finished with 0 errors, 0 critical warnings and 51 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1285.812 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1285.812 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1285.812 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1294.332 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1285.812 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 45945d98
+Synth Design complete, checksum: a17c51aa
 INFO: [Common 17-83] Releasing license: Synthesis
-18 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+18 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1294.332 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1285.812 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ehussain/Desktop/Projects/usb/usb.runs/system_sys_register_0_2_synth_1/system_sys_register_0_2.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1502.234 ; gain = 207.902
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_sys_register_0_2, cache-ID = dc8189685a704607
+write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1485.457 ; gain = 199.645
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_sys_register_0_2, cache-ID = 438751a6efadf886
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ehussain/Desktop/Projects/usb/usb.runs/system_sys_register_0_2_synth_1/system_sys_register_0_2.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_sys_register_0_2_utilization_synth.rpt -pb system_sys_register_0_2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jan  7 03:19:04 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Jan  7 04:44:13 2024...

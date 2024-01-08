@@ -18,10 +18,10 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.I_CLK.INSERT_VIP">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.I_CLK.PHASE">0.0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.ADDR">112</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.OUTWIDTH">32</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.OUTWIDTH">7</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.ADDR">112</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Component_Name">system_sys_register_0_2</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.OUTWIDTH">32</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.OUTWIDTH">7</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.ARCHITECTURE">artix7</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.BASE_BOARD_PART">digilentinc.com:basys3:part0:1.2</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.BOARD_CONNECTIONS"/>
@@ -66,7 +66,7 @@
                   &quot;i_data&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;31&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;i_addr&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;7&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;i_load_data&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
-                  &quot;o_data&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;31&quot;, &quot;size_right&quot;: &quot;0&quot; } ]
+                  &quot;o_data&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;6&quot;, &quot;size_right&quot;: &quot;0&quot; } ]
                 },
                 &quot;interfaces&quot;: {
                   &quot;i_clk&quot;: {

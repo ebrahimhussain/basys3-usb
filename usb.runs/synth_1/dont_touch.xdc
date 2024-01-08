@@ -65,10 +65,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xlco
 # IP: bd/system/ip/system_sys_register_0_2/system_sys_register_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_sys_register_0_2 || ORIG_REF_NAME==system_sys_register_0_2} -quiet] -quiet
 
-# IP: bd/system/ip/system_variable_clock_div_0_0/system_variable_clock_div_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_variable_clock_div_0_0 || ORIG_REF_NAME==system_variable_clock_div_0_0} -quiet] -quiet
-
 # IP: bd/system/ip/system_gpio_obuf_0_2/system_gpio_obuf_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_gpio_obuf_0_2 || ORIG_REF_NAME==system_gpio_obuf_0_2} -quiet] -quiet
+
+# IP: bd/system/ip/system_usb_dll_0_0/system_usb_dll_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_usb_dll_0_0 || ORIG_REF_NAME==system_usb_dll_0_0} -quiet] -quiet
 
 # XDC: c:/Users/ehussain/Desktop/Projects/usb/usb.gen/sources_1/bd/system/system_ooc.xdc

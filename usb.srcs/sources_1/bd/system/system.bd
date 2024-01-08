@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7EB4F0A362F04304",
+      "boundary_crc": "0x52B8A3A2B035C3AC",
       "device": "xc7a35tcpg236-1",
       "gen_directory": "../../../../usb.gen/sources_1/bd/system",
       "name": "system",
@@ -35,9 +35,9 @@
         "gpio_obuf_0": "",
         "uart_tx_viewer_0": ""
       },
-      "sys_register_0": "",
-      "variable_clock_div_0": "",
-      "gpio_obuf_0": ""
+      "dll_phase_reg_p": "",
+      "gpio_obuf_0": "",
+      "usb_dll_0": ""
     },
     "ports": {
       "BTNL": {
@@ -243,12 +243,6 @@
       "JA10": {
         "direction": "IO"
       },
-      "JB1": {
-        "direction": "IO"
-      },
-      "JB2": {
-        "direction": "IO"
-      },
       "JB3": {
         "direction": "IO"
       },
@@ -316,6 +310,12 @@
         "direction": "I"
       },
       "JC2": {
+        "direction": "I"
+      },
+      "JB1": {
+        "direction": "I"
+      },
+      "JB2": {
         "direction": "I"
       }
     },
@@ -1075,7 +1075,7 @@
           },
           "reg_p": {
             "direction": "I",
-            "left": "31",
+            "left": "6",
             "right": "0"
           }
         },
@@ -1352,17 +1352,17 @@
           }
         }
       },
-      "sys_register_0": {
+      "dll_phase_reg_p": {
         "vlnv": "xilinx.com:module_ref:sys_register:1.0",
         "xci_name": "system_sys_register_0_2",
         "xci_path": "ip\\system_sys_register_0_2\\system_sys_register_0_2.xci",
-        "inst_hier_path": "sys_register_0",
+        "inst_hier_path": "dll_phase_reg_p",
         "parameters": {
           "ADDR": {
             "value": "112"
           },
           "OUTWIDTH": {
-            "value": "32"
+            "value": "7"
           }
         },
         "reference_info": {
@@ -1400,54 +1400,8 @@
           },
           "o_data": {
             "direction": "O",
-            "left": "31",
+            "left": "6",
             "right": "0"
-          }
-        }
-      },
-      "variable_clock_div_0": {
-        "vlnv": "xilinx.com:module_ref:variable_clock_div:1.0",
-        "xci_name": "system_variable_clock_div_0_0",
-        "xci_path": "ip\\system_variable_clock_div_0_0\\system_variable_clock_div_0_0.xci",
-        "inst_hier_path": "variable_clock_div_0",
-        "parameters": {
-          "COUNT_WIDTH": {
-            "value": "32"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "variable_clock_div",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "i_clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "const_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "system_clk_in_bufg_0_0_o_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "COUNT": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "o_clk": {
-            "type": "clk",
-            "direction": "O",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "1500000"
-              }
-            }
           }
         }
       },
@@ -1474,7 +1428,7 @@
                 "value_src": "default_prop"
               },
               "CLK_DOMAIN": {
-                "value": "system_variable_clock_div_0_0_o_clk",
+                "value": "system_usb_dll_0_0_o_usb_clk",
                 "value_src": "default_prop"
               }
             }
@@ -1483,9 +1437,68 @@
             "direction": "IO"
           }
         }
+      },
+      "usb_dll_0": {
+        "vlnv": "xilinx.com:module_ref:usb_dll:1.0",
+        "xci_name": "system_usb_dll_0_0",
+        "xci_path": "ip\\system_usb_dll_0_0\\system_usb_dll_0_0.xci",
+        "inst_hier_path": "usb_dll_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "usb_dll",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "const_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "system_clk_in_bufg_0_0_o_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_data": {
+            "direction": "I"
+          },
+          "i_phase_set": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "count": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "edgedetect": {
+            "direction": "O"
+          },
+          "o_usb_clk": {
+            "type": "clk",
+            "direction": "O",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "1500000"
+              }
+            }
+          }
+        }
       }
     },
     "nets": {
+      "JB2_1": {
+        "ports": [
+          "JB2",
+          "LD11",
+          "usb_dll_0/i_data"
+        ]
+      },
       "Net": {
         "ports": [
           "JB7",
@@ -1544,8 +1557,8 @@
           "led_2_reg_b/i_clk",
           "reg_c/i_clk",
           "UART_tx/i_clk",
-          "sys_register_0/i_clk",
-          "variable_clock_div_0/i_clk"
+          "dll_phase_reg_p/i_clk",
+          "usb_dll_0/i_clk"
         ]
       },
       "clocks_LD2": {
@@ -1696,9 +1709,9 @@
       },
       "sys_register_0_o_data1": {
         "ports": [
-          "sys_register_0/o_data",
-          "variable_clock_div_0/COUNT",
-          "UART_tx/reg_p"
+          "dll_phase_reg_p/o_data",
+          "UART_tx/reg_p",
+          "usb_dll_0/i_phase_set"
         ]
       },
       "sys_register_1_o_data": {
@@ -1714,7 +1727,7 @@
           "led_1_reg_a/i_load_data",
           "led_2_reg_b/i_load_data",
           "reg_c/i_load_data",
-          "sys_register_0/i_load_data"
+          "dll_phase_reg_p/i_load_data"
         ]
       },
       "uart_rx_interpreter_0_o_waddr": {
@@ -1725,7 +1738,7 @@
           "led_2_reg_b/i_addr",
           "reg_c/i_addr",
           "UART_tx/i_addr",
-          "sys_register_0/i_addr"
+          "dll_phase_reg_p/i_addr"
         ]
       },
       "uart_rx_interpreter_0_o_wdata": {
@@ -1735,12 +1748,12 @@
           "led_1_reg_a/i_data",
           "led_2_reg_b/i_data",
           "reg_c/i_data",
-          "sys_register_0/i_data"
+          "dll_phase_reg_p/i_data"
         ]
       },
-      "variable_clock_div_0_o_clk": {
+      "usb_dll_0_o_usb_clk": {
         "ports": [
-          "variable_clock_div_0/o_clk",
+          "usb_dll_0/o_usb_clk",
           "gpio_obuf_0/d_i"
         ]
       }
